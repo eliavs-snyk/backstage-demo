@@ -14,7 +14,7 @@ source .env
 Do not leave the terminal where you sourced the `.env` file, as we will use the environment variables in the following
 steps and also use the output from some steps to continue with the next ones.
 
-### PostgresSQL
+### PostgreSQL
 
 First, we will deploy CloudNativePG operator to the cluster. This operator will take care to deploy a PostgreSQL
 instance for our Backstage application.
