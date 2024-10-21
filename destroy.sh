@@ -31,14 +31,6 @@ Do you want to continue?
 echo ""
 gum confirm "Do you want to continue?" || exit 0
 
-cd iac/civo-cluster
-source .env
-
-pulumi stack select dev
-pulumi destroy -y -f
-
-rm -f kubeconfig.yaml
-
 rm -f apps/*.yaml
 
 rm -f infra/*.yaml
@@ -48,4 +40,12 @@ git add .
 git commit -m "Destroy"
 
 git push
+
+cd iac/civo-cluster
+source .env
+
+pulumi stack select dev
+pulumi destroy -y -f
+
+rm -f kubeconfig.yaml
 
