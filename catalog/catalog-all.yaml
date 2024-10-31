@@ -6,3 +6,4 @@ metadata:
 spec:
   targets:
     - ./users-app-component.yaml
+    - ./users-app-component.yaml
